@@ -26,5 +26,5 @@ if file:
     for box in results[0].boxes:
         label = model.names[int(box.cls[0])]
         conf = float(box.conf[0])
-        if conf > 0.5:   # 👈 FILTER (50%)
+        if conf > 0.5: 
             st.write(f"{label} - {conf*100:.0f}%")
